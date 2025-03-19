@@ -6,6 +6,7 @@ const main = document.getElementById("section")
 const form = document.getElementById("form")
 const search = document.getElementById("search")
 
+returnMovies(APILINK)
 function returnMovies(url) {
     fetch(url).then(res => res.json())
     .then(function(data) {
@@ -16,6 +17,14 @@ function returnMovies(url) {
             const div_column = document.createElement('div')
             const image = document.createElement('img')
             const title = document.createElement('h3')
+            const center = document.createElement('center')
+
+            title.innerHTML = `${element.title}`
+            image.src = IMG_PATH + element.poster_path
+
+            center.appendChild(image)
+            div_card.appendChild(center)
+            div_card.appendChild(title)
         })
     })
 }
