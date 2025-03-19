@@ -4,7 +4,7 @@ const SEARCHAPI = "https://api.themoviedb.org/3/search/movie?&api_key=e2e16d960f
 
 const main = document.getElementById("section")
 const form = document.getElementById("form")
-const search = document.getElementById("search")
+const search = document.getElementById("query")
 
 returnMovies(APILINK)
 function returnMovies(url) {
@@ -16,18 +16,18 @@ function returnMovies(url) {
             div_card.setAttribute('class', 'card')
 
             const div_row = document.createElement('div')
-            div_card.setAttribute('class', 'card')
+            div_row.setAttribute('class', 'row')
 
             const div_column = document.createElement('div')
-            div_card.setAttribute('class', 'card')
+            div_column.setAttribute('class', 'column')
 
             const image = document.createElement('img')
-            div_card.setAttribute('class', 'card')
-            div_card.setAttribute('class', 'card')
+            image.setAttribute('class', 'thumbnail')
+            image.setAttribute('id', 'image')
 
             const title = document.createElement('h3')
-            div_card.setAttribute('class', 'card')
-            
+            title.setAttribute('id', 'title')
+
             const center = document.createElement('center')
 
             title.innerHTML = `${element.title}`
