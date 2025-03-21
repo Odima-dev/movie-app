@@ -9,3 +9,12 @@ const url = `mongodb
 mongodb+srv://${mongo_username}:${mongo_password}@cluster0.440or.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
 
 const port = 8000
+
+MongoClient.connect(
+    uri,
+    {
+        maxPoolSize: 50,
+        wtimeoutMS: 2500,
+        useNewUrlParser: true
+    }
+)
