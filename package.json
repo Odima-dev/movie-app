@@ -4,7 +4,7 @@
   "description": "Creating a fullstack movie app using Vanilla JavaScript for app frontend and node.js, expressjs, and mongodb on the backend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,9 @@
   "homepage": "https://github.com/Odima-dev/movie-app#readme",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "mongodb": "^6.15.0",
     "mongoose": "^8.12.1"
   }
 }
