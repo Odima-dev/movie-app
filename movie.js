@@ -7,14 +7,14 @@ const APILINK = 'http://127.0.0.1:8000/api/v1/reviews/'
 const main = document.getElementById("section")
 const title = document.getElementById("title")
 
-const search = document.getElementById("query")
+title.innerText = movieTitle
 
-returnMovies(APILINK)
-function returnMovies(url) {
-    fetch(url).then(res => res.json())
+returnReviews(APILINK)
+function returnReviews(url) {
+    fetch(url + "movie/" + movieId).then(res => res.json())
     .then(function(data) {
-        console.log(data.results)
-        data.results.forEach(element => {
+        console.log(data)
+        data.forEach(element => {
             const div_card = document.createElement('div')
             div_card.setAttribute('class', 'card')
 
