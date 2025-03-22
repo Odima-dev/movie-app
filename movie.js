@@ -1,7 +1,12 @@
+const url = new URL(location.href); 
+const movieId = url.searchParams.get("id")
+const movieTitle = url.searchParams.get("title")
+
 const APILINK = 'http://127.0.0.1:8000/api/v1/reviews/'
 
 const main = document.getElementById("section")
-const form = document.getElementById("form")
+const title = document.getElementById("title")
+
 const search = document.getElementById("query")
 
 returnMovies(APILINK)
